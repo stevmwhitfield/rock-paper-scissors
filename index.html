@@ -4,10 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock, Paper, Scissorss</title>
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mirza:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-    <script src="main.js"></script>
+    <div class="wrapper">
+        <!-- Title -->
+        <header id="title">
+            <h1 class="text-center">Rock, Paper, Scissors</h1>
+        </header>
+        <main id="start">
+            <button id="play">Press to start</button>
+        </main>
+        <!-- Round, choices, players, results -->
+        <main id="game" class="hidden">
+            <header id="round-count">
+                <h3 class="text-center">Round 1<!-- Change round number with JS --></h3>
+            </header>
+            <section id="player-select">
+                <img id="rock-select" class="object" src="./images/stone.svg" alt="Rock">
+                <img id="paper-select" class="object" src="./images/paper.svg" alt="Paper">
+                <img id="scissors-select" class="object" src="./images/scissors.svg" alt="Scissors">
+            </section>
+            <section id="players">
+                <article id="user" class="player">
+                    <p class="text-center">Player</p>
+                    <!-- <img> created dynamically with JS -->
+                    <img src="./images/unknown.svg" alt="">
+                    <p class="text-center">Score: 0<!-- Add score with JS --> </p>
+                </article>
+                <h1>Versus</h1>
+                <article id="computer" class="player">
+                    <p class="text-center">Computer</p>
+                    <!-- <img> created dynamically with JS -->
+                    <img src="./images/unknown.svg" alt="">
+                    <p class="text-center">Score: 0<!-- Add score with JS --> </p>
+                </article>
+            </section>
+            <section id="round-result">
+                <h2 class="text-center"><!-- Add text with JS --></h2>
+            </section>
+        </main>
+        <!-- Copyright -->
+        <footer id="copyright" class="text-center">
+            <span>&copy; 2021 Steven Whitfield</span>
+        </footer>
+    </div>
+
+    <script src="./assets/js/import.js"></script>
 </body>
 </html>

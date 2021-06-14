@@ -1,0 +1,13 @@
+Components:
+ - Title
+ - Score
+ - Player throw
+ - Computer throw
+ - Throw options
+ - Round result
+ - Copyright
+
+ Events:
+ - Increment round number on new round
+ - Change '?' to chosen object on object click
+ - Increment score according to who wins the round
