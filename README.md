@@ -4,12 +4,14 @@
 
 ### Description:
 
-A simple game of rock, paper, scissors played in the browser against a computer. The first to five points is the winner. Refresh the page if you wish to play again or close the page to exit.
+A game of rock, paper, scissors played in the browser against a computer. The first to five points is the winner.
 
 ### Skills used:
 
+- HTML
+- CSS
 - JavaScript
 
 ### Future plans:
 
-A GUI will be added to enhance the user experience.
+Will be responsive for mobile devices.
