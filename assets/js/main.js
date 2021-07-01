@@ -65,17 +65,17 @@ function playerSelect(choice) {
 
     // Display selection
     if (choice === "rock") {
-        playerObject.src = "../images/stone.svg";
+        playerObject.src = "./images/stone.svg";
         playerObject.alt = "Player threw rock";
         playerSelection = "rock";
     }
     if (choice === "paper") {
-        playerObject.src = "../images/paper.svg";
+        playerObject.src = "./images/paper.svg";
         playerObject.alt = "Player threw paper";
         playerSelection = "paper";
     }
     if (choice === "scissors") {
-        playerObject.src = "../images/scissors.svg";
+        playerObject.src = "./images/scissors.svg";
         playerObject.alt = "Player threw scissors";
         playerSelection = "scissors";
     }
@@ -89,17 +89,17 @@ function playerSelect(choice) {
 function computerSelect() {
     let n = getRandomInteger(1,3);
     if (n === 1) {
-        computerObject.src = "../images/stone.svg";
+        computerObject.src = "./images/stone.svg";
         computerObject.alt = "Computer threw rock";
         computerSelection = 'rock';
     }
     if (n === 2) {
-        computerObject.src = "../images/paper.svg";
+        computerObject.src = "./images/paper.svg";
         computerObject.alt = "Computer threw paper";
         computerSelection = 'paper';
     }
     if (n === 3) {
-        computerObject.src = "../images/scissors.svg";
+        computerObject.src = "./images/scissors.svg";
         computerObject.alt = "Computer threw scissors";
         computerSelection = 'scissors';
     }
