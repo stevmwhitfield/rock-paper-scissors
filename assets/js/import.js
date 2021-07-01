@@ -9,6 +9,6 @@ function include(file) {
     
   }
     
-  /* Include Many js files */
+  /* Include many js files */
   include('./assets/js/main.js');
   //include('/assets/js/game.js');

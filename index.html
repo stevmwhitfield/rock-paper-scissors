@@ -15,13 +15,19 @@
         <header id="title">
             <h1 class="text-center">Rock, Paper, Scissors</h1>
         </header>
+        <!-- Start button -->
         <main id="start">
             <button id="play">Press to start</button>
         </main>
-        <!-- Round, choices, players, results -->
+        <!-- Play again button -->
+        <main id="restart" class="hidden">
+            <h1 id="gameResult" class="hidden"><!-- Add text with JS --></h1>
+            <button id="playAgain" class="hidden"> Play Again?</button>
+        </main>
+        <!-- Game -->
         <main id="game" class="hidden">
             <header id="round-count">
-                <h3 class="text-center">Round 1<!-- Change round number with JS --></h3>
+                <h3 id="roundNumber" class="text-center">Round 1<!-- Change round number with JS --></h3>
             </header>
             <section id="player-select">
                 <img id="rock-select" class="object" src="./images/stone.svg" alt="Rock">
@@ -32,19 +38,19 @@
                 <article id="user" class="player">
                     <p class="text-center">Player</p>
                     <!-- <img> created dynamically with JS -->
-                    <img src="./images/unknown.svg" alt="">
-                    <p class="text-center">Score: 0<!-- Add score with JS --> </p>
+                    <img id="playerObject" src="./images/unknown.svg" alt="">
+                    <p id="playerScore" class="text-center">Score: 0<!-- Add score with JS --> </p>
                 </article>
-                <h1>Versus</h1>
+                <h1>versus</h1>
                 <article id="computer" class="player">
                     <p class="text-center">Computer</p>
                     <!-- <img> created dynamically with JS -->
-                    <img src="./images/unknown.svg" alt="">
-                    <p class="text-center">Score: 0<!-- Add score with JS --> </p>
+                    <img id="computerObject" src="./images/unknown.svg" alt="">
+                    <p id="computerScore" class="text-center">Score: 0<!-- Add score with JS --> </p>
                 </article>
             </section>
-            <section id="round-result">
-                <h2 class="text-center"><!-- Add text with JS --></h2>
+            <section id="round-end">
+                <h2 id="roundResult" class="text-center"><!-- Add text with JS --></h2>
             </section>
         </main>
         <!-- Copyright -->

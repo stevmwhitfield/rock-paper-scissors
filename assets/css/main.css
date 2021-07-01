@@ -67,7 +67,15 @@ p {
   display: flex;
   justify-content: center;
 }
-#play {
+
+#restart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#play,
+#playAgain {
   margin-top: 16rem;
   font-size: 3.2rem;
   padding: 0.25em 1em;
@@ -79,7 +87,8 @@ p {
   transition: all 0.6s;
 }
 
-#play:hover {
+#play:hover,
+#playAgain:hover {
   transform: scale(1.1) translate(0, -1rem);
 }
 
@@ -149,8 +158,8 @@ main {
   height: 20rem;
 }
 
-#round-result {
-  padding-top: 0.8rem;
+#round-end {
+  color: var(--color-text-alt);
   text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
 }
 
