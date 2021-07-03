@@ -4,6 +4,8 @@ const mainGame = document.querySelector('#game');
 const restartGame = document.querySelector('#restart');
 const playAgainButton = document.querySelector('#playAgain');
 
+const title = document.querySelector('#title');
+
 const rockSelect = document.querySelector('#rock-select');
 const paperSelect = document.querySelector('#paper-select');
 const scissorsSelect = document.querySelector('#scissors-select');
@@ -30,10 +32,16 @@ function init() {
     playerScore = 0;
     computerScore = 0;
     roundNumber = 1;
+
     playerScoreText.textContent = "Score: " + playerScore;
     computerScoreText.textContent = "Score: " + computerScore;
     roundNumberText.textContent = "Round " + roundNumber;
     roundResultText.textContent = "";
+
+    playerObject.src = "./images/unknown.svg";
+    playerObject.alt = "";
+    computerObject.src = "./images/unknown.svg";
+    computerObject.alt = "";
 }
 
 // Hide the play button and reveal the game
@@ -41,6 +49,7 @@ function switchScreen() {
     playButton.classList.add('hidden');
     playButton.parentElement.classList.add('hidden');
     mainGame.classList.remove('hidden');
+    title.classList.add('title-fix');
 }
 
 // Hide the game and reveal play again button
@@ -49,6 +58,7 @@ function playAgain() {
     restartGame.classList.remove('hidden');
     playAgainButton.classList.remove('hidden');
     gameResultText.classList.remove('hidden');
+    title.classList.remove('title-fix');
 }
 
 // Start game from play again button
@@ -57,6 +67,7 @@ function startAgain() {
     mainGame.classList.remove('hidden');
     playAgainButton.classList.add('hidden');
     gameResultText.classList.add('hidden');
+    title.classList.add('title-fix');
     init();
 }
 

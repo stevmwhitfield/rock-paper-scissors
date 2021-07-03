@@ -8,8 +8,12 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 10px;
   width: 100%;
+  height: 100%;
+}
+
+html {
+  font-size: 10px;
 }
 
 body {
@@ -44,28 +48,59 @@ h6 {
 }
 
 h1 {
-  font-size: 6.4rem;
+  font-size: 3.2rem;
   padding-top: 0.5em;
   padding-bottom: 0;
 }
 h2 {
-  font-size: 4.2rem;
+  font-size: 2.8rem;
 }
 h3 {
-  font-size: 2.8rem;
+  font-size: 2.4rem;
 }
 
 p {
-  font-size: 3.6rem;
+  font-size: 2.1rem;
 }
 
 .hidden {
   display: none;
+  flex: 0;
 }
 
-#start {
+.wrapper {
+  width: 100%;
+  height: 100%;
   display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
   justify-content: center;
+}
+
+#title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(0, -20rem);
+}
+
+.title-fix {
+  transform: translate(0, 8rem) !important;
+}
+
+#title > h1 {
+  padding-bottom: 1em;
+}
+
+#start,
+#restart {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: translate(0, -20rem);
 }
 
 #restart {
@@ -76,7 +111,6 @@ p {
 
 #play,
 #playAgain {
-  margin-top: 16rem;
   font-size: 3.2rem;
   padding: 0.25em 1em;
   background: var(--color-text);
@@ -92,21 +126,15 @@ p {
   transform: scale(1.1) translate(0, -1rem);
 }
 
+#game {
+  width: 100%;
+  height: 100%;
+  transform: translate(0, 4rem);
+}
+
 .text-center {
   text-align: center;
   margin: 0 auto;
-}
-
-#title {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-main {
-  height: calc(100% - 6rem);
-  padding: 0 24rem;
 }
 
 #round-count {
@@ -114,16 +142,19 @@ main {
 }
 
 #player-select {
+  width: min(95%, 80rem);
+  margin: 0 auto;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;
   align-items: center;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
 }
 
 .object {
-  width: 19rem;
+  width: 8rem;
   height: 100%;
+  padding: 0 1em;
   transition: all 0.3s;
   cursor: pointer;
 }
@@ -133,17 +164,19 @@ main {
 }
 
 #players {
+  width: min(90%, 70rem);
+  margin: 0 auto;
   margin-bottom: 2rem;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
   align-items: center;
   text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .player {
-  width: 46rem;
-  height: 36rem;
+  width: 16rem;
+  height: 12.5rem;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -155,12 +188,25 @@ main {
 
 .player > img {
   width: 100%;
-  height: 20rem;
+  height: 7rem;
+}
+
+#versus {
+  margin: 0;
+  letter-spacing: 0.1em;
+  color: var(--color-text-alt);
 }
 
 #round-end {
+  width: min(80%, 60ch);
+  margin: 0 auto;
   color: var(--color-text-alt);
   text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+#roundResult {
+  font-size: 2.4rem;
+  padding-top: 1em;
 }
 
 #copyright {
@@ -174,6 +220,71 @@ main {
 }
 
 #copyright > span {
-  padding-right: 3rem;
   font-size: 2.1rem;
+}
+
+@media screen and (min-width: 30em) {
+  h1 {
+    font-size: 4.2rem;
+  }
+  h2 {
+    font-size: 3.6rem;
+  }
+  h3 {
+    font-size: 3.2rem;
+  }
+
+  .object {
+    width: 12rem;
+  }
+
+  #players {
+    flex-flow: row;
+    margin-top: 6rem;
+  }
+
+  .player {
+    height: 16rem;
+  }
+
+  #versus {
+    font-size: 3.6rem;
+  }
+
+  #roundResult {
+    font-size: 3.2rem;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  h1 {
+    font-size: 5.2rem;
+  }
+
+  p {
+    font-size: 2.4rem;
+  }
+
+  .object {
+    width: 16rem;
+  }
+
+  .player {
+    width: 24rem;
+    height: 19rem;
+  }
+
+  #versus {
+    font-size: 3.6rem;
+  }
+
+  #roundResult {
+    font-size: 3.2rem;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  h1 {
+    font-size: 6.4rem;
+  }
 }
